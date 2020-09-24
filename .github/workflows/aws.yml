@@ -54,5 +54,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: hisan-me
-        cluster: default
+        cluster: hisan-me
         wait-for-service-stability: true

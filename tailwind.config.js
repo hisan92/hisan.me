@@ -5,6 +5,10 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
+  // Disable WARNs on build proccess
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   prefix: 'tw-',
   separator: '--',
   purge: false,
