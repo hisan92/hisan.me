@@ -8,6 +8,7 @@ module.exports = {
   // Disable WARNs on build proccess
   future: {
     removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
   prefix: 'tw-',
   separator: '--',

@@ -1,6 +1,6 @@
 {
   "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::735200076868:role/ecsTaskExecutionRole",
+  "executionRoleArn": null,
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
@@ -17,7 +17,12 @@
       "command": null,
       "linuxParameters": null,
       "cpu": 0,
-      "environment": [],
+      "environment": [
+        {
+          "name": "NUXT_HOST",
+          "value": "0.0.0.0"
+        }
+      ],
       "resourceRequirements": null,
       "ulimits": null,
       "dnsServers": null,
@@ -29,7 +34,7 @@
       "memoryReservation": 512,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "735200076868.dkr.ecr.us-east-1.amazonaws.com/hisan.me",
+      "image": "735200076868.dkr.ecr.us-east-1.amazonaws.com/hisan.me:d1a70c491ee148ecaa58fd1b7cb8f939d98f108c",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -51,11 +56,11 @@
   ],
   "placementConstraints": [],
   "memory": "512",
-  "taskRoleArn": "arn:aws:iam::735200076868:role/ecsTaskExecutionRole",
+  "taskRoleArn": null,
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:735200076868:task-definition/hisan-me:1",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:735200076868:task-definition/hisan-me:5",
   "family": "hisan-me",
   "requiresAttributes": [
     {
@@ -69,18 +74,6 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.execution-role-ecr-pull"
     }
   ],
   "pidMode": null,
@@ -89,7 +82,7 @@
   ],
   "networkMode": null,
   "cpu": "1024",
-  "revision": 1,
+  "revision": 5,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
