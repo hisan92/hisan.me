@@ -4,14 +4,21 @@ export default {
     links: {
       home: 'Home',
       skills: 'Skills',
-      about: 'About me',
+      about: 'About',
+      qna: 'Q&A',
+    },
+    anchors: {
+      whoami: 'Who Am I',
+      skills: 'My skills',
+      about: 'About this site',
+      qna: 'Questions and Answers',
     },
   },
   pages: {
     home: {
-      greetingTitle: 'Hi, my name is {0}, welcome to my personal website.',
+      greetingTitle: 'Hi, welcome. You can call me {0}.',
       greetingBody:
-        "Actually, I'm Web Developer, focusing in NodeJS Frameworks. I love music, landscapes, technology and I support OpenSource. You can contact me on {0} and {1}.",
+        "I'm Web Developer, and I have been focusing in Node.js Frameworks. I like music, landscapes, technology and support OpenSource. You can find me on {0} and {1}.",
     },
     skills: {
       technical: 'Technical Knowledge',
@@ -21,7 +28,7 @@ export default {
     },
     about: {
       body:
-        'The main objective of this website is to show my vCard/Curriculum to all people around the world. Also, if you like this, some of technologies used to built this site are: Git, Docker, NuxtJS. You can contact me if you have any question. You can fork me on {0}.',
+        'The objective of this site is to show my vCard to others persons around the world. If you are interested, this site was built with: Git, Docker, Nuxt.js and is hosted on Amazon Cloud, using CI and ECS proccesses. Contact me if you have any question. You can fork me at {0}.',
     },
   },
   route: {
@@ -30,6 +37,16 @@ export default {
       help:
         "The page you're looking for seems not exist, or maybe you're a time traveler!",
       back: 'Go back for {0}.',
+    },
+  },
+  questionsAndAnswers: {
+    job: {
+      question: '<missing translation>',
+      answer: '<missing translation>',
+    },
+    area: {
+      question: '<missing translation>',
+      answer: '<missing translation>',
     },
   },
 }
