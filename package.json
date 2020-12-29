@@ -13,7 +13,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@nuxt/typescript-runtime": "^2.0.0",
