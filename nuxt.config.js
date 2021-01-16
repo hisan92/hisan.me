@@ -19,7 +19,9 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    htmlAttrs: {},
+    htmlAttrs: {
+      class: 'has-fixed-navbar',
+    },
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -137,7 +139,11 @@ export default {
   // Webfont
   webfontloader: {
     google: {
-      families: ['Open Sans:400,700', 'Poppins:400,700'],
+      families: [
+        'Open Sans:400,700',
+        'Poppins:400,500,700',
+        'Roboto:400,700,900',
+      ],
     },
   },
 
@@ -154,7 +160,6 @@ export default {
   },
 
   purgeCSS: {
-    mode: 'postcss',
     enabled: process.env.NODE_ENV === 'production',
   },
 }

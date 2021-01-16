@@ -1,1 +1,75 @@
-nav
+$navbar-height: 3.6rem !default
+
+.navbar
+  @apply tw-z-10
+
+  &.fixed
+    @apply tw-fixed tw-w-full tw-top-0 tw-left-0
+
+  backdrop-filter: blur(4px)
+
+  &.shadow
+    box-shadow: 0 8px 22px -2px rgba(0, 0, 0, .6);
+    transition: box-shadow .2s ease
+
+  @screen sm
+    @apply tw-flex tw-justify-between tw-items-center tw-px-40 tw-py-3
+
+  & > .content
+    @apply tw-flex tw-items-center tw-justify-between tw-px-4 py-3
+
+    @screen sm
+      @apply tw-p-0
+
+    & > .brand
+      > img
+        @apply tw-h-8
+
+    & > .burger
+      @screen sm
+        @apply tw-hidden
+
+      & > .toggle
+        @apply tw-block tw-text-gray-500
+
+        & > .icon
+          @apply tw-h-6 tw-w-6 tw-fill-current
+
+        &:hover
+          @apply tw-text-white
+
+        &:focus
+          @apply tw-text-white tw-outline-none
+
+  & > .menu
+    @apply tw-px-2 tw-pt-2 tw-pb-4 tw-items-center
+
+    @screen sm
+      @apply tw-flex tw-p-0
+
+    @media (max-width: 639px)
+      &.visible
+        @apply tw-block
+
+      &:not(.visible)
+        @apply tw-hidden
+
+    & > .item
+      @apply tw-mt-1 tw-block tw-px-2 tw-py-1 tw-font-medium tw-uppercase tw-rounded
+      font-family: Poppins
+      font-size: .9em
+
+      @screen sm
+        @apply tw-mt-0
+
+      &:hover
+        background-color: rgba($primary-color, .4)
+        transition: background-color .2s ease-in-out
+
+      &:not(:first-child)
+        @screen sm
+          @apply tw-ml-2
+
+html, body
+  &.has-fixed-navbar
+    margin-top: $navbar-height

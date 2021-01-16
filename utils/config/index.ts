@@ -4,14 +4,18 @@ export const defaultButtonSize = 'md'
 
 export const defaultButtonSizes = ['sm', 'md', 'lg', 'xl']
 
-export const defaultLinkTags = [
-  'a',
-  'button',
-  'input',
+export const defaultVueRouterLinkTags = [
   'router-link',
   'nuxt-link',
   'RouterLink',
   'NuxtLink',
+]
+
+export const defaultLinkTags = [
+  'a',
+  'button',
+  'input',
+  ...defaultVueRouterLinkTags,
 ]
 
 export const defaultIconPack = 'fas'
