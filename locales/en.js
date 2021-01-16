@@ -18,7 +18,7 @@ export default {
     home: {
       greetingTitle: 'Hi, welcome. You can call me {0}.',
       greetingBody:
-        "I'm Web Developer, and I have been focusing in Node.js Frameworks. I like music, landscapes, technology and support OpenSource. You can find me on {0} and {1}.",
+        "I'm an brazillian Software Developer, and I have been focusing in website development and Node.js Frameworks. I love music, landscapes, technology and support Open-source. You can find me on {0} and {1}.",
     },
     skills: {
       technical: 'Technical Knowledge',
@@ -41,12 +41,18 @@ export default {
   },
   questionsAndAnswers: {
     job: {
-      question: '<missing translation>',
-      answer: '<missing translation>',
+      question: 'Are you employed?',
+      answer:
+        "Year, I'm working in a civil engineering company at full time. When I'm not busy, I like to talk with friends about ideas and projects. And I work in personal projects, like this site.",
     },
     area: {
-      question: '<missing translation>',
-      answer: '<missing translation>',
+      question: '<missing translation, can you help me?>',
+      answer: '<missing translation, can you help me?>',
+    },
+    tech: {
+      question: 'Can you talk more about this site?',
+      answer:
+        "Sure! But if you want know more deeply, then I recommend you to visit the Github repository and undestand how this work. So, basicaly this site is built with Nuxt.js, it's Vue. Futhermore, it uses TailwindCSS, FontAwesome, Pug, Sass, PurgeCSS and TypeScript.",
     },
   },
 }

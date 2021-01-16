@@ -17,10 +17,13 @@
 
     & > .item
       @apply tw-block tw-px-4 tw-py-2 tw-cursor-pointer
+      font-size: 0.8rem
       transition: ease .5s
 
       &.active
         background-color: $link-color
+        pointer-events: none
+        opacity: 0.7
 
       &:hover
         background-color: $link-color
