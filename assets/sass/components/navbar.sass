@@ -1,7 +1,7 @@
 $navbar-height: 3.6rem !default
 
 .navbar
-  @apply tw-z-10
+  @apply tw-px-4 tw-z-10
 
   &.fixed
     @apply tw-fixed tw-w-full tw-top-0 tw-left-0
@@ -13,7 +13,13 @@ $navbar-height: 3.6rem !default
     transition: box-shadow .2s ease
 
   @screen sm
-    @apply tw-flex tw-justify-between tw-items-center tw-px-40 tw-py-3
+    @apply tw-flex tw-justify-between tw-items-center tw-py-3
+
+  @screen md
+    @apply tw-px-16
+
+  @screen lg
+    @apply tw-px-40
 
   & > .content
     @apply tw-flex tw-items-center tw-justify-between tw-px-4 py-3

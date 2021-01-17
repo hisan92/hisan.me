@@ -8,9 +8,12 @@
       @apply tw-outline-none tw-border-white
 
   & > .menu
-    @apply tw-absolute tw-hidden tw-right-0 tw-mt-2 tw-py-2 tw-rounded-md tw-shadow-xl
+    @apply tw-absolute tw-hidden tw-mt-2 tw-py-2 tw-rounded-md tw-shadow-xl
     background-color: $background-color
     min-width: 8rem
+
+    @screen sm
+      @apply tw-right-0
 
     &.visible
       @apply tw-block
