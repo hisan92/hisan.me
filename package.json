@@ -20,7 +20,7 @@
     "@nuxtjs/axios": "^5.12.4",
     "@nuxtjs/composition-api": "^0.12.5",
     "core-js": "^3.8.1",
-    "nuxt": "^2.14.12",
+    "nuxt": "^2.15.2",
     "nuxt-buefy": "^0.4.4",
     "nuxt-i18n": "^6.16.0"
   },
