@@ -5,7 +5,7 @@
       .column
         p.legend
           | {{ $t('pages.skills.technical') }}
-        .row
+        .row.inline
           a(href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank")
             JavaScriptLogo(width="48")
           a(href="https://www.typescriptlang.org/" target="_blank")
@@ -20,7 +20,7 @@
             PythonLogo(width="48")
         p.legend
           | {{ $t('pages.skills.technologies') }}
-        .row
+        .row.inline
           a(href="https://git-scm.com/" target="_blank")
             GitLogo(width="48")
           a(href="https://www.docker.com/" target="_blank")

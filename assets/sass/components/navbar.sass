@@ -1,12 +1,13 @@
 $navbar-height: 3.6rem !default
 
 .navbar
-  @apply tw-px-4 tw-z-10
+  @apply tw-px-16 tw-z-10
+  background-color: rgba($body-background-color, .2)
 
   &.fixed
     @apply tw-fixed tw-w-full tw-top-0 tw-left-0
 
-  backdrop-filter: blur(4px)
+  backdrop-filter: blur(20px) saturate(180%)
 
   &.shadow
     box-shadow: 0 8px 22px -2px rgba(0, 0, 0, .6);
@@ -16,10 +17,10 @@ $navbar-height: 3.6rem !default
     @apply tw-flex tw-justify-between tw-items-center tw-py-3
 
   @screen md
-    @apply tw-px-16
+    @apply tw-px-32
 
   @screen lg
-    @apply tw-px-40
+    @apply tw-px-64
 
   & > .content
     @apply tw-flex tw-items-center tw-justify-between tw-px-4 py-3
