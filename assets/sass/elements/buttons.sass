@@ -1,0 +1,86 @@
+$radius: 5px
+$letter-spacing: 2px
+$spacing: $letter-spacing * 2
+
+.button
+  @apply tw-px-6 tw-py-1 tw-uppercase
+  background-color: $background-color
+  font-family: Poppins
+  font-size: .9em
+  letter-spacing: $letter-spacing
+  word-spacing: $spacing
+  border-radius: $radius
+  border-width: 2px
+  border-color: $background-color
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+
+  &.link
+    background-color: $link-color
+    border-color: $link-color
+
+  &.success
+    background-color: $success-color
+    border-color: $success-color
+
+  &.danger
+    background-color: $danger-color
+    border-color: $danger-color
+
+  &.small
+    font-size: .5em
+
+  &.large
+    font-size: 1.2em
+
+  &.xlarge
+    font-size: 1.6em
+
+  &.loading
+    &::after
+      content: ""
+
+  &.full
+    @apply tw-block tw-w-full
+
+  &:hover
+    opacity: .9
+
+  &:focus
+    @apply tw-outline-none
+    box-shadow: 0 0 0 3px $primary-color
+
+    &.link
+      box-shadow: 0 0 0 3px rgba($link-color, .6 )
+
+    &.success
+      box-shadow: 0 0 0 3px rgba($success-color, .6 )
+
+    &.danger
+      box-shadow: 0 0 0 3px rgba($danger-color, .6 )
+
+  &:active, &.active
+    background-color: $primary-color
+
+    &.link
+      background-color: rgba($link-color, .8)
+
+    &.success
+      background-color: rgba($success-color, .8)
+
+    &.danger
+      background-color: rgba($danger-color, .8)
+
+
+  + .full
+    @apply tw-mt-2
+
+  &[disabled], &.disabled, &.loading
+    pointer-events: none
+    opacity: .4
+
+  &:not(.full)
+    + .button
+      @apply tw-ml-2
+
+  >:not(:first-child)
+    @apply ml-2

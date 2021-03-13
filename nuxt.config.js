@@ -1,3 +1,5 @@
+import { resolve } from 'path'
+
 export default {
   // Disable Nuxt Telemetry prompt
   telemetry: false,
@@ -16,26 +18,17 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Noto+Sans',
-      },
-    ],
+    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     htmlAttrs: {
-      // class: ['has-navbar-fixed-top'],
+      class: 'has-fixed-navbar',
     },
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['~/assets/scss/base.scss'],
+  css: ['~/assets/sass/index.sass'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-    '~/plugins/register-components',
-    { src: '~/plugins/vue-particles.js', ssr: false },
-  ],
+  plugins: ['~/plugins/register-components'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: false,
@@ -50,16 +43,20 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://github.com/nuxt-community/fontawesome-module
     '@nuxtjs/fontawesome',
+    // https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
+
+    // 'nuxt-purgecss',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/buefy
-    'nuxt-buefy',
     // https://github.com/nuxt-community/i18n-module
     'nuxt-i18n',
+
+    'nuxt-webfontloader',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -68,6 +65,27 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     extractCSS: true,
+    postcss: {
+      plugins: {
+        tailwindcss: resolve(__dirname, './tailwind.config.js'),
+      },
+    },
+    preset: {
+      stage: 1, // see https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
+    },
+  },
+
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        tailwindConfig: {
+          test: /tailwind\.config/,
+          chunks: 'all',
+          priority: 10,
+          name: true,
+        },
+      },
+    },
   },
 
   // Trick for composition api
@@ -113,7 +131,20 @@ export default {
     component: 'Fa',
     suffix: true,
     icons: {
-      solid: ['faGlobeAmericas'],
+      brands: ['faAmazon'],
+      solid: ['faCircleNotch', 'faCube', 'faGlobeAmericas'],
+    },
+  },
+
+  // Webfont
+  webfontloader: {
+    google: {
+      families: [
+        'Open Sans:400,700',
+        'Poppins:400,500,700',
+        'Roboto:400,700,900',
+        'Pinyon Script:400',
+      ],
     },
   },
 
@@ -123,10 +154,13 @@ export default {
     background: '#2980b9',
   },
 
-  loading: { color: '#fff' },
+  loading: { color: '#3273dc' },
 
-  buefy: {
-    materialDesignIcons: false,
-    defaultIconPack: 'fa',
+  styleResources: {
+    sass: ['~/assets/sass/index.sass'],
+  },
+
+  purgeCSS: {
+    enabled: process.env.NODE_ENV === 'production',
   },
 }

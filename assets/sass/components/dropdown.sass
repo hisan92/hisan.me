@@ -1,0 +1,32 @@
+.dropdown
+  @apply tw-relative
+
+  > .trigger
+    @apply tw-block tw-h-8 tw-w-8 tw-rounded-full tw-overflow-hidden
+
+    &:focus
+      @apply tw-outline-none tw-border-white
+
+  & > .menu
+    @apply tw-absolute tw-hidden tw-mt-2 tw-py-2 tw-rounded-md tw-shadow-xl
+    background-color: $background-color
+    min-width: 8rem
+
+    @screen sm
+      @apply tw-right-0
+
+    &.visible
+      @apply tw-block
+
+    & > .item
+      @apply tw-block tw-px-4 tw-py-2 tw-cursor-pointer
+      font-size: 0.8rem
+      transition: ease .5s
+
+      &.active
+        background-color: $link-color
+        pointer-events: none
+        opacity: 0.7
+
+      &:hover
+        background-color: $link-color

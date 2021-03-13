@@ -1,12 +1,17 @@
 <template lang="pug">
-    Skills
+  .divider(:class="{ vertical: vertical }")
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import Skills from '~/components/Skills.vue'
 
 export default defineComponent({
-  components: { Skills },
+  name: 'AppDivider',
+  props: {
+    vertical: {
+      type: Boolean,
+      default: () => false,
+    },
+  },
 })
 </script>

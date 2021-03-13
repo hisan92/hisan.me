@@ -1,12 +1,19 @@
 <template lang="pug">
-  About
+  .avatar
+    .inner
+      img(:src="image")
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import About from '~/components/About.vue'
 
 export default defineComponent({
-  components: { About },
+  name: 'AppAvatar',
+  props: {
+    image: {
+      type: String,
+      required: true,
+    },
+  },
 })
 </script>

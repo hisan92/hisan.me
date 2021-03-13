@@ -1,12 +1,32 @@
 <template lang="pug">
-    HelloWorld
+    .container
+      Avatar
+
+      Greetings
+
+      Content
+
+      Skills
+
+      Trivia
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import HelloWorld from '~/components/HelloWorld.vue'
+
+import Avatar from '~/components/Avatar.vue'
+import Greetings from '~/components/Greetings.vue'
+import Content from '~/components/Content.vue'
+import Skills from '~/components/Skills.vue'
+import Trivia from '~/components/Trivia.vue'
 
 export default defineComponent({
-  components: { HelloWorld },
+  components: {
+    Avatar,
+    Greetings,
+    Content,
+    Skills,
+    Trivia,
+  },
 })
 </script>
