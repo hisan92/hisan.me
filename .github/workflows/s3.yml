@@ -1,0 +1,35 @@
+on:
+  release:
+    types: [created]
+
+name: S3 Deploy
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_SECRET }}
+    steps:
+        - uses: actions/checkout@v2
+
+        - name: Install dependencies
+          run: npm i
+
+        - name: Build
+          run: npm run build
+
+        - name: Generate
+          run: npm run generate
+
+        - name: Deploy
+          uses: reggionick/s3-deploy@v3
+          with:
+            folder: build
+            bucket: ${{ secrets.S3_BUCKET }}
+            dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+            bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+            invalidation: /
+            delete-removed: true
+            no-cache: true
+            private: true
