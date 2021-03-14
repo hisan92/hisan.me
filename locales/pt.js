@@ -28,7 +28,7 @@ export default {
     },
     about: {
       body:
-        'A criação desse site tem como objetivo apresentar um cartão de visitas para que outras pessoas possam me conhecer. Caso tenha interesse, este site foi produzido usando as seguintes tecnologias: Git, Docker, Nuxt.js e está hospedado na nuvem da Amazon, usando o processo de CI e ECS. Gostou? Entre em contato, faça elogios ou críticas, todos são bem-vindos. Você pode visualizar o código-fonte em {0}.',
+        'A criação desse site tem como objetivo apresentar um cartão de visitas para que outras pessoas possam me conhecer. Caso tenha interesse, este site foi produzido usando as seguintes tecnologias: Git, Docker, Nuxt.js e está hospedado na nuvem da Amazon, usando o processo de CI e deploy automático usando Github Actions. Gostou? Entre em contato, faça elogios ou críticas, todos são bem-vindos. Dê uma olhada no código-fonte em {0}, adoraria ver sua PR.',
     },
   },
   route: {

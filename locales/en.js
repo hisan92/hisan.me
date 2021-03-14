@@ -28,7 +28,7 @@ export default {
     },
     about: {
       body:
-        'The objective of this site is to show my vCard to others persons around the world. If you are interested, this site was built with: Git, Docker, Nuxt.js and is hosted on Amazon Cloud, using CI and ECS proccesses. Contact me if you have any question. You can fork me at {0}.',
+        "The objective of this site is to show my vCard to others persons around the world. If you are interested, this site was built with: Git, Docker, Nuxt.js and is hosted on Amazon Cloud, using CI and automatic deploy with Github Actions. Contact me if you have any question. Checkout this project on {0}, I'll apreciate your PR.",
     },
   },
   route: {
