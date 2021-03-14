@@ -46,8 +46,8 @@ export default {
         "Year, I'm working in a civil engineering company at full time. When I'm not busy, I like to talk with friends about ideas and projects. And I work in personal projects, like this site.",
     },
     area: {
-      question: '<missing translation, can you help me?>',
-      answer: '<missing translation, can you help me?>',
+      question: 'Why did you choose become a developer?',
+      answer: 'I always liked technology, and I had a certain admiration for those who already work on it. One day I had the chance to learn programming. Today I made it my current profession and passion.',
     },
     tech: {
       question: 'Can you talk more about this site?',
