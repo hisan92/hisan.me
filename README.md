@@ -11,13 +11,13 @@
 First, clone the entire project
 
 ```bash
-$ git clone https://github.com/hsn9207/hisan.me.git
+$ git clone https://github.com/hisan92/hisan.me.git
 ```
 
 or
 
 ```bash
-$ git clone git@github.com:hsn9207/hisan.me.git
+$ git clone git@github.com:hisan92/hisan.me.git
 ```
 
 ## Build Setup

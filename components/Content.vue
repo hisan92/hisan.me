@@ -5,7 +5,7 @@
     p
       i18n(path="pages.about.body")
         template(#0)
-          a(href="https://github.com/hsn9207/hisan.me" target="_blank") Github
+          a(href="https://github.com/hisan92/hisan.me" target="_blank") Github
 
 </template>
 

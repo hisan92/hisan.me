@@ -6,7 +6,7 @@
     p
       i18n(path="pages.home.greetingBody")
         template(#0)
-          a(href="https://github.com/hsn9207" target="_blank") Github
+          a(href="https://github.com/hisan92" target="_blank") Github
         template(#1)
           a(href="https://www.linkedin.com/in/hisan" target="_blank") LinkedIn
 </template>
