@@ -32,11 +32,11 @@ export default defineComponent({
 
 <style lang="sass">
 .greeting
-  @apply tw-mb-12
+  @apply mb-12
 
   .h1
-    @apply tw-text-center tw-mb-8
+    @apply text-center mb-8
 
   a
-    @apply tw-border-dashed tw-border-b-2
+    @apply border-dashed border-b-2
 </style>

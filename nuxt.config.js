@@ -1,5 +1,3 @@
-import { resolve } from 'path'
-
 export default {
   // Disable Nuxt Telemetry prompt
   telemetry: false,
@@ -45,8 +43,6 @@ export default {
     '@nuxtjs/fontawesome',
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
-
-    // 'nuxt-purgecss',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -65,11 +61,6 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     extractCSS: true,
-    postcss: {
-      plugins: {
-        tailwindcss: resolve(__dirname, './tailwind.config.js'),
-      },
-    },
     preset: {
       stage: 1, // see https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
     },
@@ -158,9 +149,5 @@ export default {
 
   styleResources: {
     sass: ['~/assets/sass/index.sass'],
-  },
-
-  purgeCSS: {
-    enabled: process.env.NODE_ENV === 'production',
   },
 }

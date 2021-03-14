@@ -65,7 +65,7 @@ export default defineComponent({
 <style lang="sass">
 .navbar
   .brand
-    @apply tw-font-semibold
+    @apply font-semibold
     font-family: 'Pinyon Script'
     font-size: 1.75rem
 </style>

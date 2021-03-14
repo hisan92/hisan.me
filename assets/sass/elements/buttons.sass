@@ -3,7 +3,7 @@ $letter-spacing: 2px
 $spacing: $letter-spacing * 2
 
 .button
-  @apply tw-px-6 tw-py-1 tw-uppercase
+  @apply px-6 py-1 uppercase
   background-color: $background-color
   font-family: Poppins
   font-size: .9em
@@ -40,13 +40,13 @@ $spacing: $letter-spacing * 2
       content: ""
 
   &.full
-    @apply tw-block tw-w-full
+    @apply block w-full
 
   &:hover
     opacity: .9
 
   &:focus
-    @apply tw-outline-none
+    @apply outline-none
     box-shadow: 0 0 0 3px $primary-color
 
     &.link
@@ -72,7 +72,7 @@ $spacing: $letter-spacing * 2
 
 
   + .full
-    @apply tw-mt-2
+    @apply mt-2
 
   &[disabled], &.disabled, &.loading
     pointer-events: none
@@ -80,7 +80,7 @@ $spacing: $letter-spacing * 2
 
   &:not(.full)
     + .button
-      @apply tw-ml-2
+      @apply ml-2
 
   >:not(:first-child)
     @apply ml-2

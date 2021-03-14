@@ -37,7 +37,7 @@
       .column
         p.legend
           | {{ $t('pages.skills.designPatterns') }}
-        p.tw-mb-8
+        p.mb-8
           | Factory, Adapter, Composite, Singleton, Facade, Observer, Proxy
         p.legend
           | {{ $t('pages.skills.agile') }}
@@ -81,8 +81,8 @@ export default defineComponent({
 
 <style lang="sass">
 .skills
-  @apply tw-mb-8
+  @apply mb-8
 
   .legend
-    @apply tw-mb-4 tw-border-l-4 tw-pl-4
+    @apply mb-4 border-l-4 pl-4
 </style>

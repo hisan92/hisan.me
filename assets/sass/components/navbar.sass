@@ -1,11 +1,11 @@
 $navbar-height: 3.6rem !default
 
 .navbar
-  @apply tw-px-16 tw-z-10
+  @apply px-16 z-10
   background-color: rgba($body-background-color, .2)
 
-  &.fixed
-    @apply tw-fixed tw-w-full tw-top-0 tw-left-0
+  &.is-fixed
+    @apply fixed w-full top-0 left-0
 
   backdrop-filter: blur(20px) saturate(180%)
 
@@ -14,60 +14,60 @@ $navbar-height: 3.6rem !default
     transition: box-shadow .2s ease
 
   @screen sm
-    @apply tw-flex tw-justify-between tw-items-center tw-py-3
+    @apply flex justify-between items-center py-3
 
   @screen md
-    @apply tw-px-32
+    @apply px-32
 
   @screen lg
-    @apply tw-px-64
+    @apply px-64
 
   & > .content
-    @apply tw-flex tw-items-center tw-justify-between tw-px-4 py-3
+    @apply flex items-center justify-between px-4 py-3
 
     @screen sm
-      @apply tw-p-0
+      @apply p-0
 
     & > .brand
       > img
-        @apply tw-h-8
+        @apply h-8
 
     & > .burger
       @screen sm
-        @apply tw-hidden
+        @apply hidden
 
       & > .toggle
-        @apply tw-block tw-text-gray-500
+        @apply block text-gray-500
 
         & > .icon
-          @apply tw-h-6 tw-w-6 tw-fill-current
+          @apply h-6 w-6 fill-current
 
         &:hover
-          @apply tw-text-white
+          @apply text-white
 
         &:focus
-          @apply tw-text-white tw-outline-none
+          @apply text-white outline-none
 
   & > .menu
-    @apply tw-px-2 tw-pt-2 tw-pb-4 tw-items-center
+    @apply px-2 pt-2 pb-4 items-center
 
     @screen sm
-      @apply tw-flex tw-p-0
+      @apply flex p-0
 
     @media (max-width: 639px)
       &.visible
-        @apply tw-block
+        @apply block
 
       &:not(.visible)
-        @apply tw-hidden
+        @apply hidden
 
     & > .item
-      @apply tw-mt-1 tw-block tw-px-2 tw-py-1 tw-font-medium tw-uppercase tw-rounded
+      @apply mt-1 block px-2 py-1 font-medium uppercase rounded
       font-family: Poppins
       font-size: .9em
 
       @screen sm
-        @apply tw-mt-0
+        @apply mt-0
 
       &:hover
         background-color: rgba($primary-color, .4)
@@ -75,7 +75,7 @@ $navbar-height: 3.6rem !default
 
       &:not(:first-child)
         @screen sm
-          @apply tw-ml-2
+          @apply ml-2
 
 html, body
   &.has-fixed-navbar

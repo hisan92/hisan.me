@@ -22,14 +22,14 @@ export default defineComponent({
 
 <style lang="sass">
 #questions
-  @apply tw-mb-8
+  @apply mb-8
 
   & :not(:last-child)
-    @apply tw-mb-5
+    @apply mb-5
 
   .question
-    @apply tw-mb-2
+    @apply mb-2
 
   .answear
-    @apply tw-italic
+    @apply italic
 </style>

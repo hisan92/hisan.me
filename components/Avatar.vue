@@ -5,8 +5,8 @@
 
 <style lang="sass">
 .avatar-container
-  @apply tw-my-12
+  @apply my-12
 
   > .avatar
-    @apply tw-mx-auto
+    @apply mx-auto
 </style>

@@ -10,9 +10,15 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  prefix: 'tw-',
+  // prefix: 'tw-',
   separator: '--',
-  purge: false,
+  purge: [
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+  ],
   theme: {
     width: (theme) => ({
       auto: 'auto',

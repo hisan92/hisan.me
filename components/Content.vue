@@ -11,8 +11,8 @@
 
 <style lang="sass">
 main .content
-  @apply tw-mb-12
+  @apply mb-12
 
   a
-    @apply tw-border-dashed tw-border-b-2
+    @apply border-dashed border-b-2
 </style>

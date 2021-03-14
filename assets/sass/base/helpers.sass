@@ -1,21 +1,21 @@
 h1, .h1
-  @apply tw-font-semibold tw-mb-4
+  @apply font-semibold mb-4
   font-size: 2rem
 
 h2, .h2
-  @apply tw-font-medium tw-mb-3
+  @apply font-medium mb-3
   font-size: 1.75rem
 
 h3, .h3
-  @apply tw-font-medium tw-mb-2
+  @apply font-medium mb-2
   font-size: 1.5rem
 
 .title
-  @apply tw-font-medium tw-mb-2
+  @apply font-medium mb-2
   font-size: 1.5rem
 
   &::before
-    @apply tw-mr-2
+    @apply mr-2
     content: '\2219'
 
 .disabled, *:disabled
@@ -23,14 +23,14 @@ h3, .h3
   opacity: 0.7
 
 .row
-  @apply tw-flex tw-flex-wrap tw-mb-8
+  @apply flex flex-wrap mb-8
 
   &.inline
     >:not(:last-child)
-      @apply tw-mr-2
+      @apply mr-2
 
   .column
-    @apply tw-w-full tw-mb-4
+    @apply w-full mb-4
 
     @screen md
-      @apply tw-w-1_2
+      @apply w-1_2

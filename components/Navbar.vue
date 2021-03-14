@@ -1,5 +1,5 @@
 <template lang="pug">
-  header.navbar(:class="{ fixed, shadow }")
+  header.navbar(:class="{ 'is-fixed': fixed, shadow }")
     .content
       .brand
         slot(name="brand")

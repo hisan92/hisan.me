@@ -1,25 +1,25 @@
 .dropdown
-  @apply tw-relative
+  @apply relative
 
   > .trigger
-    @apply tw-block tw-h-8 tw-w-8 tw-rounded-full tw-overflow-hidden
+    @apply block h-8 w-8 rounded-full overflow-hidden
 
     &:focus
-      @apply tw-outline-none tw-border-white
+      @apply outline-none border-white
 
   & > .menu
-    @apply tw-absolute tw-hidden tw-mt-2 tw-py-2 tw-rounded-md tw-shadow-xl
+    @apply absolute hidden mt-2 py-2 rounded-md shadow-xl
     background-color: $background-color
     min-width: 8rem
 
     @screen sm
-      @apply tw-right-0
+      @apply right-0
 
     &.visible
-      @apply tw-block
+      @apply block
 
     & > .item
-      @apply tw-block tw-px-4 tw-py-2 tw-cursor-pointer
+      @apply block px-4 py-2 cursor-pointer
       font-size: 0.8rem
       transition: ease .5s
 
