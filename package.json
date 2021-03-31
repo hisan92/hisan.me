@@ -40,7 +40,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "node-sass": "^5.0.0",
     "nuxt-webfontloader": "^1.1.0",
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.9",
     "prettier": "^2.2.1",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.1.0",
