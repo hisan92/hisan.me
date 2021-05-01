@@ -1,0 +1,21 @@
+.section
+  @apply container mx-auto
+
+  @screen sm
+    @apply px-6
+
+  @screen md
+    @apply px-12
+    max-width: 800px
+
+  .content
+    @apply mx-3 py-1
+
+    @screen sm
+      @apply mx-0
+
+    >:not(:last-child)
+      @apply mb-12
+
+    .link
+      @apply border-dashed border-b-2

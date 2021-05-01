@@ -1,7 +1,6 @@
 $navbar-height: 3.6rem !default
 
 .navbar
-  @apply px-16 z-10
   background-color: rgba($body-background-color, .2)
 
   &.is-fixed
@@ -13,70 +12,74 @@ $navbar-height: 3.6rem !default
     box-shadow: 0 8px 22px -2px rgba(0, 0, 0, .6);
     transition: box-shadow .2s ease
 
-  @screen sm
-    @apply flex justify-between items-center py-3
-
-  @screen md
-    @apply px-32
-
-  @screen lg
-    @apply px-64
-
-  & > .content
-    @apply flex items-center justify-between px-4 py-3
+  .inner
+    @apply container mx-auto px-3
 
     @screen sm
-      @apply p-0
+      @apply flex justify-between items-center px-12 py-3
+      max-width: 800px
 
-    & > .brand
-      > img
-        @apply h-8
+    .brand
+      @apply font-semibold
+      font-family: 'Pinyon Script'
+      font-size: 1.75rem
 
-    & > .burger
+    > .content
+      @apply flex items-center justify-between py-3
+
       @screen sm
-        @apply hidden
+        @apply p-0
 
-      & > .toggle
-        @apply block text-gray-500
+      & > .brand
+        > img
+          @apply h-8
 
-        & > .icon
-          @apply h-6 w-6 fill-current
+      & > .burger
+        @screen sm
+          @apply hidden
+
+        & > .toggle
+          @apply block text-gray-500
+
+          & > .icon
+            @apply h-6 w-6 fill-current
+
+          &:hover
+            @apply text-white
+
+          &:focus
+            @apply text-white outline-none
+
+    > .menu
+      @apply px-2 pt-2 pb-4 items-center
+
+      @screen sm
+        @apply flex p-0
+
+      @media (max-width: 639px)
+        &.visible
+          @apply block
+
+        &:not(.visible)
+          @apply hidden
+
+      & > .item
+        @apply mt-1 block px-2 py-1 font-medium uppercase rounded
+        font-family: Poppins
+        font-size: .9em
+
+        @screen sm
+          @apply mt-0
 
         &:hover
-          @apply text-white
+          background-color: rgba($primary-color, .4)
+          transition: background-color .2s ease-in-out
 
-        &:focus
-          @apply text-white outline-none
-
-  & > .menu
-    @apply px-2 pt-2 pb-4 items-center
-
-    @screen sm
-      @apply flex p-0
-
-    @media (max-width: 639px)
-      &.visible
-        @apply block
-
-      &:not(.visible)
-        @apply hidden
-
-    & > .item
-      @apply mt-1 block px-2 py-1 font-medium uppercase rounded
-      font-family: Poppins
-      font-size: .9em
-
-      @screen sm
-        @apply mt-0
-
-      &:hover
-        background-color: rgba($primary-color, .4)
-        transition: background-color .2s ease-in-out
-
-      &:not(:first-child)
-        @screen sm
-          @apply ml-2
+        &:not(:first-child)
+          @screen sm
+            @apply ml-2
 
 html, body
   &.has-fixed-navbar
-    margin-top: $navbar-height
+    main
+      margin-top: calc(#{$navbar-height} + .54rem)

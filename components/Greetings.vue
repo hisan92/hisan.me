@@ -6,9 +6,9 @@
     p
       i18n(path="pages.home.greetingBody")
         template(#0)
-          a(href="https://github.com/hisan92" target="_blank") Github
+          a.link(href="https://github.com/hisan92" target="_blank") Github
         template(#1)
-          a(href="https://www.linkedin.com/in/hisan" target="_blank") LinkedIn
+          a.link(href="https://www.linkedin.com/in/hisan" target="_blank") LinkedIn
 </template>
 
 <script lang="ts">
@@ -32,8 +32,6 @@ export default defineComponent({
 
 <style lang="sass">
 .greeting
-  @apply mb-12
-
   .h1
     @apply text-center mb-8
 

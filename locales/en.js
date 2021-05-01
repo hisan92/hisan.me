@@ -16,7 +16,7 @@ export default {
   },
   pages: {
     home: {
-      greetingTitle: 'Hi, welcome. You can call me {0}.',
+      greetingTitle: 'Hi, welcome. My name is {0}.',
       greetingBody:
         "I'm an brazillian Software Developer, and I have been focusing in website development and Node.js Frameworks. I love music, landscapes, technology and support Open-source. You can find me on {0} and {1}.",
     },

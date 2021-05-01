@@ -35,7 +35,7 @@
             | {{ local.name }}
 
     //- Content
-    main
+    main.section
       Nuxt
 
     //- Footer
@@ -61,11 +61,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="sass">
-.navbar
-  .brand
-    @apply font-semibold
-    font-family: 'Pinyon Script'
-    font-size: 1.75rem
-</style>

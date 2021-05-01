@@ -16,7 +16,7 @@ export default {
   },
   pages: {
     home: {
-      greetingTitle: 'Olá, bem-vindo, pode me chamar de {0}.',
+      greetingTitle: 'Olá, bem-vindo, me chamo {0}.',
       greetingBody:
         'Sou desenvolvedor de software brasileiro. Meu foco hoje é em sistemas web e frameworks Node.js. Adoro música dos mais variados tipos, paisagens, tecnologia e apoio a cultura Open-source. Você pode se conectar comigo em {0} e {1}.',
     },
