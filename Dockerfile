@@ -1,6 +1,6 @@
 FROM node:lts
 
-MAINTAINER Hiago dos Santos
+LABEL maintainer="Hiago dos Santos"
 
 COPY . /application
 
