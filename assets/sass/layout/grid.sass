@@ -1,0 +1,14 @@
+.row
+  @apply grid
+
+  @for $i from 1 through 12
+    &.cols-#{$i}
+      @apply grid-cols-#{$i}
+
+    &.sm_cols-#{$i}
+      @screen sm
+        @apply grid-cols-#{$i}
+
+    &.md_cols-#{$i}
+      @screen md
+        @apply grid-cols-#{$i}

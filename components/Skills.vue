@@ -1,11 +1,11 @@
 <template lang="pug">
   #skills.skills
     .title {{ $t('labels.anchors.skills') }}
-    .row
+    .row.sm_cols-1.md_cols-2.gap-6.mb-3
       .column
         p.legend
           | {{ $t('pages.skills.technical') }}
-        .row.inline
+        .row.cols-6
           a(href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank")
             JavaScriptLogo(width="48")
           a(href="https://www.typescriptlang.org/" target="_blank")
@@ -18,9 +18,18 @@
             CSharpLogo(width="48")
           a(href="https://python.org/" target="_blank")
             PythonLogo(width="48")
+
+      .column
+        p.legend
+          | {{ $t('pages.skills.designPatterns') }}
+        p
+          | Factory, Adapter, Composite, Singleton, Facade, Observer, Proxy
+
+    .row.sm_cols-1.md_cols-2.gap-6
+      .column
         p.legend
           | {{ $t('pages.skills.technologies') }}
-        .row.inline
+        .row.cols-6
           a(href="https://git-scm.com/" target="_blank")
             GitLogo(width="48")
           a(href="https://www.docker.com/" target="_blank")
@@ -35,10 +44,6 @@
             GraphQLLogo(width="48")
 
       .column
-        p.legend
-          | {{ $t('pages.skills.designPatterns') }}
-        p.mb-8
-          | Factory, Adapter, Composite, Singleton, Facade, Observer, Proxy
         p.legend
           | {{ $t('pages.skills.agile') }}
         p
@@ -81,8 +86,6 @@ export default defineComponent({
 
 <style lang="sass">
 .skills
-  @apply mb-8
-
   .legend
     @apply mb-4 border-l-4 pl-4
 </style>

@@ -21,16 +21,3 @@ h3, .h3
 .disabled, *:disabled
   pointer-events: none
   opacity: 0.7
-
-.row
-  @apply flex flex-wrap mb-8
-
-  &.inline
-    >:not(:last-child)
-      @apply mr-2
-
-  .column
-    @apply w-full mb-4
-
-    @screen md
-      @apply w-1_2
