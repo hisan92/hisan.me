@@ -35,53 +35,34 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+
     // https://composition-api.nuxtjs.org/
     '@nuxtjs/composition-api/module',
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
-    // https://github.com/nuxt-community/fontawesome-module
-    '@nuxtjs/fontawesome',
-    // https://github.com/nuxt-community/style-resources-module
-    '@nuxtjs/style-resources',
-  ],
 
-  // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+
     // https://github.com/nuxt-community/i18n-module
     'nuxt-i18n',
 
-    'nuxt-webfontloader',
+    // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/tailwindcss',
+
+    // https://github.com/nuxt-community/fontawesome-module
+    '@nuxtjs/fontawesome',
+
+    'nuxt-webfontloader'
   ],
+
+  // Modules (https://go.nuxtjs.dev/config-modules)
+  modules: [],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    extractCSS: true,
-    preset: {
-      stage: 1, // see https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
-    },
-  },
-
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        tailwindConfig: {
-          test: /tailwind\.config/,
-          chunks: 'all',
-          priority: 10,
-          name: true,
-        },
-      },
-    },
-  },
-
-  // Trick for composition api
-  generate: {
-    interval: 2000,
+    extractCSS: true
   },
 
   // Router Configuration
@@ -147,7 +128,8 @@ export default {
 
   loading: { color: '#3273dc' },
 
-  styleResources: {
-    sass: ['~/assets/sass/index.sass'],
-  },
+  // TailwindCSS Build config
+  tailwindcss: {
+    jit: true
+  }
 }

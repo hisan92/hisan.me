@@ -5,11 +5,6 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-  // Disable WARNs on build proccess
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   // prefix: 'tw-',
   separator: '--',
   purge: [
@@ -17,7 +12,7 @@ module.exports = {
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
+    './nuxt.config.{js,ts}'
   ],
   theme: {
     width: (theme) => ({
@@ -50,7 +45,7 @@ module.exports = {
       '10_12': '83.333333%',
       '11_12': '91.666667%',
       full: '100%',
-      screen: '100vw',
+      screen: '100vw'
     }),
     extend: {
       spacing: {
@@ -61,10 +56,10 @@ module.exports = {
         104: '26rem',
         112: '28rem',
         120: '30rem',
-        128: '32rem',
-      },
-    },
+        128: '32rem'
+      }
+    }
   },
   variants: {},
-  plugins: [],
+  plugins: []
 }
