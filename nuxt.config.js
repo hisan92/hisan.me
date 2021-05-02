@@ -62,7 +62,10 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    extractCSS: true
+    extractCSS: true,
+    babel: {
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
+    }
   },
 
   // Router Configuration
